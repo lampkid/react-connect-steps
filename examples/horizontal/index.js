@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 import Connect from '../../src';
 
-export default class WorkBench extends PureComponent {
+export default class ConnectSteps extends PureComponent {
     componentDidMount() {
 
     }
 
 	render() {
-		return <div className="workbench-container" style={{width: 500}}>
+		return <div style={{width: 500}}>
             <Connect mode="horizontal">
                 <div>
                     <ol>
