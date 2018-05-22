@@ -1,8 +1,8 @@
 {
   "name": "react-connect-steps",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "connect dom elemenet with SVG arrow line",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "keywords": [
     "react",
     "SVG",
@@ -30,6 +30,7 @@
     "babel-register": "^6.26.0",
     "html-webpack-plugin": "^3.2.0",
     "react": "15",
+    "react-connect-steps": "^0.0.3",
     "react-dom": "15",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3",
