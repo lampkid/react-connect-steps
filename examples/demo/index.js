@@ -1,17 +1,11 @@
-# react-connect-steps
-react-connnect-steps, connect multi divs with svg line  in a horizontal or vertical  direction
-
-# connect multi divs
-```javascript
 import React, { PureComponent } from 'react';
 import Connect from 'react-connect-steps';
 
 export default class ConnectSteps extends PureComponent {
 
-    // mode = vertical || horizontal
 	render() {
 		return <div style={{width: 500}}>
-            <Connect mode="vertical">
+            <Connect mode="horizontal">
                 <div>
                     <ol>
                         <li>one</li>
@@ -36,4 +30,3 @@ export default class ConnectSteps extends PureComponent {
 		</div>
 	}
 }
-```
