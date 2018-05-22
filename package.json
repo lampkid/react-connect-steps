@@ -1,0 +1,49 @@
+{
+  "name": "react-connect-steps",
+  "version": "0.0.1",
+  "description": "connect dom elemenet with SVG arrow line",
+  "main": "src/index.js",
+  "keywords": [
+    "react",
+    "SVG",
+    "line",
+    "steps",
+    "connnect"
+  ],
+  "scripts": {
+    "start": "webpack-dev-server --mode development --config webpack.config.js --context .",
+    "build": "babel src -d lib --copy-files",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "15",
+    "react-dom": "15",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-hot-middleware": "^2.22.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lampkid/react-connect-steps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lampkid/string-diff/issues"
+  },
+  "homepage": "https://github.com/lampkid/react-connect-steps#readme",
+  "author": "lampkid",
+  "license": "GPL-3.0"
+}
