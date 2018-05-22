@@ -13,7 +13,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --config webpack.config.js --context .",
     "build": "babel src -d lib --copy-files",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {},

@@ -4509,6 +4509,10 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-connect-steps@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-connect-steps/-/react-connect-steps-0.0.3.tgz#b18cb1aca3b4c5b1a9b028c5b6b5040cd5e63cf0"
+
 react-dom@15:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
