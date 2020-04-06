@@ -19,6 +19,25 @@ function Line({
     );
 }
 
+function Curve({
+    style, 
+    coordinate={ x1: 50, y1: 0, x2: 50, y2: 50}
+    }) {
+
+    const { x1, y1, x2, y2 } = coordinate;
+
+    return (
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve" style={{...style}}>
+            <defs> 
+              <marker id="markerArrow" markerWidth="11" markerHeight="11" refX={2} refY={6} orient="auto"> 
+                <path d="M2,2 L2,11 L10,6 L2,2" style={{"fill": "#8C9EFF"}} /> 
+              </marker> 
+            </defs>
+            <path d={`M ${x1},${y1} L ${x1} ${y1+10}, L ${x1+20} ${y1+10}  C ${x1+10} ${y1/3}, ${x1+20} ${y1/2} ${x2} ${y2}`} style={{"stroke": "#8C9EFF", fill: 'transparent', "markerEnd": "url(#markerArrow)"}} />
+        </svg>
+    );
+}
+
 function Border({children, style}) {
     return <div style={{border: '2px solid #8C9EFF', ...style}}>{children}</div>
 }
@@ -56,7 +75,7 @@ export default class Connect extends React.PureComponent {
 
     render() {
         const children = this.props.children || [];
-        let {width, height, mode='vertical', arrowLenth=50} = this.props;
+        let {width, height, mode='vertical', arrowLenth=50, curve=false} = this.props;
         const length = children.length;
         return (
             <div style={{width: '100%', position: 'relative'}}>
@@ -101,8 +120,9 @@ export default class Connect extends React.PureComponent {
                     }
 
                     const step = <div ref={(elem) =>{this.borders[index] = elem; } } style={{...style, border: '2px solid #8C9EFF'}}>{child}</div>;
+                    const joint = curve ? <Curve coordinate={coordinate} style={lineStyle} /> : <Line style={lineStyle} coordinate={coordinate} />;
                     
-                    return [mode === 'vertical' ? <div>{step}</div> : step, index !== length -1 ? <Line style={lineStyle} coordinate={coordinate} /> : null]
+                    return [mode === 'vertical' ? <div>{step}</div> : step, index !== length -1 ? joint : null]
                 })
             }
             </div>

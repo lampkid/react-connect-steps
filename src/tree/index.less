@@ -1,0 +1,35 @@
+.treeNode-joint-path {
+    animation: move 300ms ease-in-out 1;
+}
+.marker-end {
+    marker-end: url(#markerArrow);
+}
+@keyframes move {
+    0% {
+        stroke-dasharray: 0 165;
+        marker-start: url(#markerArrow);
+    }
+
+    100% {
+        stroke-dasharray: 15 165;
+        marker-end: url(#markerArrow);
+    }
+}
+
+.node-border {
+    animation: running-border 3s ease-in-out infinite;
+}
+
+@keyframes running-border {
+    0% {
+        stroke-dasharray: 10 12;
+        stroke-dashoffset: -800;
+        stroke-width: 1px;
+    }
+    100% {
+        stroke-dasharray: 700;
+        stroke-dashoffset: 0;
+        stroke-width: 2px;
+        stroke: red;
+    }
+}

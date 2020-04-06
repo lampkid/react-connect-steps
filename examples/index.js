@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import Vertical from './vertical';
 import Horizontal from './horizontal';
 import Demo from './demo';
+import TreeDemo from './tree';
 const Main = () => {
     return (
         <div>
+            <TreeDemo />
             <Vertical />
             <Horizontal />
 
